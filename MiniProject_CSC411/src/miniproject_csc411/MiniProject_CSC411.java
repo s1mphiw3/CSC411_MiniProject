@@ -34,6 +34,11 @@ public class MiniProject_CSC411 {
         /*
         try
         {
+            String filePath = "C:\\Users\\Simphiwe\\Desktop\\";
+            String fileName= "student";
+            String fileType = "xml";
+            
+            for(int counter = 1; counter <= 10; counter++){
             ITstudents stud = new ITstudents();
             
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -71,30 +76,32 @@ public class MiniProject_CSC411 {
                 System.out.println(student.getCourse_name() + " " + student.getMark());
                 Element coursename = doc.createElement("Course_Name");
                 coursename.appendChild(doc.createTextNode(student.getCourse_name()));
-                course.appendChild(coursename);
+                course.appendChild(coursename); 
                 Element mark = doc.createElement("Mark");
                 Integer mc = student.getMark();
                 mark.appendChild(doc.createTextNode(mc.toString()));
                 course.appendChild(mark);
             }
             
+
             //write to xml file
             TransformerFactory tsf = TransformerFactory.newInstance();
             Transformer ts = tsf.newTransformer();
             DOMSource source = new DOMSource(doc);
-            StreamResult result = new StreamResult(new File("C:\\Users\\Simphiwe\\Desktop\\student.xml"));
+            StreamResult result = new StreamResult(new File(filePath+fileName+counter+"."+fileType));
             ts.transform(source,result);
+            }
         }
         catch(Exception e)
         {
             e.printStackTrace();
-        }*/
+        }
         
         //consumer
-        try
+       /* try
         {
             ITstudents student = new ITstudents();
-            File file = new File("C:\\Users\\Simphiwe\\Desktop\\student.xml");
+            //File file = new File("C:\\Users\\Simphiwe\\Desktop\\student.xml");
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
             Document doc = db.parse(file);
@@ -149,9 +156,18 @@ public class MiniProject_CSC411 {
         catch(Exception e)
         {
             e.printStackTrace();
+        }   */
+        
+        File file = new File("C:\\Users\\Simphiwe\\Desktop\\student.xml");
+        ArrayList<Buffer> Buffered = new ArrayList<Buffer>(); 
+        Buffered.add(new Buffer(file));
+        for( int i=0;i<Buffered.size();i++)
+        {  
+            System.out.println(Buffered.get(i));
         }
-        
-        
+        Buffer jile;
+        jile = Buffered.get(0);
+        System.out.println( file.getName());
     }
     
 }
