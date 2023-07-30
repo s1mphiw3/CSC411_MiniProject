@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Oct 26 06:16:30 2022
 
-@author: Manyatsi
-"""
 import socket
 from threading import Thread
 
