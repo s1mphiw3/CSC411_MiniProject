@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Oct 26 06:40:03 2022
-
-@author: Manyatsi
-"""
-
 import socket
 from threading import Thread
 # if the server is not on this machine,
