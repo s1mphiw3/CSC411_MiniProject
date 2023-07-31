@@ -1,9 +1,9 @@
 # CSC411_MiniProject
 # Consumer Producer Problem
 Producer and Consumer problem making use of a shared buffer. In which no client can read from an empty buffer and no producer can write to a full buffer. We made use of the Java programming Language.
-We have a student class, which is then used by the producer to generate random students saving their data onto xml files. 
-Then the courses class which is used in the student class to assign mark to specific courses.
-We also have the producer and consumer classes respectively. The producer is responsible for genarating the list of students to be used by the the consumer. The consumer cannot make use of unnavailable students files, and producer can not produce the students list to exceed the allocated buffer size. 
+1. We have a student class, which is then used by the producer to generate random students saving their data onto xml files. 
+2. Then the courses class which is used in the student class to assign mark to specific courses.
+3. We also have the producer and consumer classes respectively. The producer is responsible for genarating the list of students to be used by the the consumer. The consumer cannot make use of unnavailable students files, and producer can not produce the students list to exceed the allocated buffer size. 
 
 # Socket Programming
 Here we made use of socket progamming to develop a messaging interface between clients 
