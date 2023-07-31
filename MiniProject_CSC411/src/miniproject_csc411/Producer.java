@@ -23,10 +23,6 @@ import java.io.File;
  */
 public class Producer 
 {
-    public Producer()
-    {
-        
-    }
    
     public void produce(int p)
     {
@@ -43,18 +39,15 @@ public class Producer
             
             Element studentn = doc.createElement("Student");
             root.appendChild(studentn);
-            System.out.println("ID" + stud.getStud_id());
+ 
             Element stud_id = doc.createElement("Student_ID");
             stud_id.appendChild(doc.createTextNode(stud.getStud_id()));
             studentn.appendChild(stud_id);
             
-            System.out.println("Name" + stud.getFull_name());
             Element name = doc.createElement("Name");
             name.appendChild(doc.createTextNode(stud.getFull_name()));
             studentn.appendChild(name);
             
-            
-            System.out.println("Programe" + stud.getProgramme());
             Element program = doc.createElement("Programe");
             program.appendChild(doc.createTextNode(stud.getProgramme()));
             studentn.appendChild(program);
@@ -66,7 +59,6 @@ public class Producer
                 Element course = doc.createElement("Course");
                 studentn.appendChild(course);
                 Stud_Courses student = courses.get(i);
-                System.out.println(student.getCourse_name() + " " + student.getMark());
                 Element coursename = doc.createElement("Course_Name");
                 coursename.appendChild(doc.createTextNode(student.getCourse_name()));
                 course.appendChild(coursename);
@@ -88,5 +80,6 @@ public class Producer
         {
             e.printStackTrace();
         }
+        
     }
 }

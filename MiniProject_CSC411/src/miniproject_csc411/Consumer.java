@@ -45,13 +45,13 @@ public class Consumer
             {
                Element element = (Element) node;
                String stud_id = element.getElementsByTagName("Student_ID").item(0).getTextContent();
-               System.out.println("ID " + stud_id);
+               System.out.println("ID : " + stud_id);
                student.setStud_id(stud_id);
                String name = element.getElementsByTagName("Name").item(0).getTextContent();
-               System.out.println("Name " + name);
+               System.out.println("Name : " + name);
                student.setFull_name(name);
                String program = element.getElementsByTagName("Programe").item(0).getTextContent();
-               System.out.println("Programe " + program);
+               System.out.println("Programe : " + program);
                student.setProgramme(program);
                NodeList subjects = doc.getElementsByTagName("Course");
                ArrayList<Stud_Courses> courses = new ArrayList<Stud_Courses>();
@@ -62,10 +62,9 @@ public class Consumer
                    Element courseElement = (Element) course;
                    String courseName = courseElement.getElementsByTagName("Course_Name").item(0).getTextContent();
                    courseItem.setCourse_name(courseName);
-                   System.out.println(courseName);
                    String mark = courseElement.getElementsByTagName("Mark").item(0).getTextContent();
                    courseItem.setMark(Integer.parseInt(mark));
-                   System.out.println(mark);
+                   System.out.println(courseName +"\t" +mark);
                    courses.add(courseItem);
         
                }
@@ -83,6 +82,7 @@ public class Consumer
             {
                 System.out.println("Fail");
             }
+            System.out.println("\n");
             
         }
         catch(Exception e)

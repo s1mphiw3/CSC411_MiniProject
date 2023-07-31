@@ -57,7 +57,6 @@ public class ITstudents {
         this.stud_id = stud_id;
         this.full_name = first_name;
         this.Programme = Programme;
-    //    this.Courses = Courses;
     }
     
     public String getStud_id() {
@@ -71,10 +70,6 @@ public class ITstudents {
     public String getFull_name() {
         return full_name;
     }
-
-    
-
-    
 
     public String getProgramme() {
         return Programme;
@@ -94,10 +89,12 @@ public class ITstudents {
         String code="";
         Random rd = new Random();// create a random object to generate numbers
         
-       String courses[] = {"Database and Design", "Computer Networking", "Security",
+       String courses[] = {"Database and Design II", "Computer Networking I", "Security I",
                    "Data Structures and Algorithms", "Software Engineering",
                    "Modern Operating Systems", "Web Technology and Development",
-                   "Data Mining", "Graphics"};
+                   "Data Mining", "Graphics","Systems Analysis and Design",
+                   "Intergrative Programming and Technologies","Entrepreneurship and Innovation"};
+       
        code = courses[rd.nextInt(courses.length)];
         
         
@@ -107,8 +104,8 @@ public class ITstudents {
     {
         String name = "";
         
-        String names[] = {"Simphiwe","Bright","Sifiso","Ncamiso","Sipho","Siviwe","Mandisa","Ntombikayise","Sphelele","Mndeni"};
-        String last[] = {"Dlamini","Khoza","Simelane","Ginindza","Mkhabela","Hlophe","Silwana","Manyatsi","Manana","Msibi"};
+      String names[] = {"Simphiwe","Bright","Sifiso","Ncamiso","Sipho","Siviwe","Mandisa","Ntombikayise","Sphelele","Mndeni","Ncedo","Sibusiso","Mpendulo","Wandile"};
+      String last[] = {"Dlamini","Shongwe","Nxumalo","Magagula","Khoza","Simelane","Ginindza","Mkhabela","Hlophe","Silwana","Manyatsi","Manana","Msibi"};
         Random rnd = new Random();
         
         name += names[rnd.nextInt(names.length)] + " " + last[rnd.nextInt(10)];
@@ -149,15 +146,6 @@ public class ITstudents {
     }
     
      
-
-    /*public ArrayList<Stud_Courses> getCourses() {
-        return Courses;
-    }
-
-    public void setCourses(ArrayList<Stud_Courses> Courses) {
-        this.Courses = Courses;
-    } */
-
     public void setFull_name(String full_name) {
         this.full_name = full_name;
     }
